@@ -1,0 +1,11 @@
+Bootstrap: docker
+From: spellrun/pytorch
+
+
+%post
+  # in-container bind points for shared filesystems
+  mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  pip install torchtext
+  pip install torchvision
+  pip install tqdm
+  pip install scikit-learn
