@@ -1,0 +1,12 @@
+Bootstrap: docker
+From: pauldhein/im2markup:latest
+
+%post
+
+   # Below are some lines that specifically help bind points for UA HPC systems
+   # in-container bind points for shared filesystems
+   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local /dev/pts
+
+   # Self-added additional materials start here
+
+   # This has an Ubuntu base so it should come with Perl
