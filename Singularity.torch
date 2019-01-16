@@ -15,6 +15,6 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
   /root/torch/install/bin/luarocks install class
   /root/torch/install/bin/luarocks install nn
   /root/torch/install/bin/luarocks install nngraph
-  /root/torch/install/bin/luarocks install cunn
-  /root/torch/install/bin/luarocks install cudnn
-  /root/torch/install/bin/luarocks install cutorch
+  # /root/torch/install/bin/luarocks install cunn
+  # /root/torch/install/bin/luarocks install cudnn
+  # /root/torch/install/bin/luarocks install cutorch
