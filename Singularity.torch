@@ -1,14 +1,20 @@
 Bootstrap: docker
-From: spellrun/torch
+# From: spellrun/torch
+From: kaixhin/cuda-torch:8.0
 
+%help
+This container is designed to utilize the Torch machine learning framework (a part of the Lua programming language).
+
+This container includes the following Lua packages that are meant to enhance the experience of using Torch:
+tds, class, nn, nngraph, cunn, cudnn, cutorch
 
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  # luarocks install tds
-  # luarocks install class
-  # luarocks install nn
-  # luarocks install nngraph
-  # luarocks install cunn
-  # luarocks install cudnn
-  # luarocks install cutorch
+  luarocks install tds
+  luarocks install class
+  luarocks install nn
+  luarocks install nngraph
+  luarocks install cunn
+  luarocks install cudnn
+  luarocks install cutorch
