@@ -11,10 +11,10 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  luarocks install tds
-  luarocks install class
-  luarocks install nn
-  luarocks install nngraph
-  luarocks install cunn
-  luarocks install cudnn
-  luarocks install cutorch
+  /root/torch/install/bin/luarocks install tds
+  /root/torch/install/bin/luarocks install class
+  /root/torch/install/bin/luarocks install nn
+  /root/torch/install/bin/luarocks install nngraph
+  /root/torch/install/bin/luarocks install cunn
+  /root/torch/install/bin/luarocks install cudnn
+  /root/torch/install/bin/luarocks install cutorch
