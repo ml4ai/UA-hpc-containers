@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: kaixhin/cuda-torch:8.0
+From: spellrun/torch
 
 %help
 This container is designed to utilize the Torch machine learning framework (a part of the Lua programming language).
@@ -10,10 +10,21 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  export CUDNN_PATH = "/usr/local/cuda/lib64/libcudnn.so.5"
-  /root/torch/install/bin/luarocks install tds
-  /root/torch/install/bin/luarocks install class
-  /root/torch/install/bin/luarocks install nn
-  /root/torch/install/bin/luarocks install nngraph
+  # export CUDNN_PATH = "/usr/local/cuda/lib64/libcudnn.so.5"
 
-  chmod 755 /root
+  # /root/torch/install/bin/luarocks install tds
+  # /root/torch/install/bin/luarocks install class
+  # /root/torch/install/bin/luarocks install nn
+  # /root/torch/install/bin/luarocks install nngraph
+
+  /root/distro/install/bin/luarocks install tds
+  /root/distro/install/bin/luarocks install class
+  /root/distro/install/bin/luarocks install nn
+  /root/distro/install/bin/luarocks install nngraph
+  /root/distro/install/bin/luarocks install cunn
+  /root/distro/install/bin/luarocks install cudnn
+  /root/distro/install/bin/luarocks install cutorch
+
+  # chmod 755 /root
+  # Torch exists at: /root/distro/install/bin/th
+  chmod 755 /root/distro/install/bin
