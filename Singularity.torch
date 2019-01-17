@@ -18,13 +18,13 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
   # /root/torch/install/bin/luarocks install nngraph
 
   /root/distro/install/bin/luarocks install tds
-  # /root/distro/install/bin/luarocks install class
-  # /root/distro/install/bin/luarocks install nn
-  # /root/distro/install/bin/luarocks install nngraph
-  # /root/distro/install/bin/luarocks install cunn
-  # /root/distro/install/bin/luarocks install cudnn
-  # /root/distro/install/bin/luarocks install cutorch
+  /root/distro/install/bin/luarocks install class
+  /root/distro/install/bin/luarocks install nn
+  /root/distro/install/bin/luarocks install nngraph
+  /root/distro/install/bin/luarocks install cunn
+  /root/distro/install/bin/luarocks install cudnn
+  /root/distro/install/bin/luarocks install cutorch
 
   # chmod 755 /root
   # Torch exists at: /root/distro/install/bin/th
-  # chmod 755 /root/distro/install/bin
+  chmod 755 /root/distro/install/bin
