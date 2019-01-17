@@ -10,6 +10,7 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  export CUDNN_PATH = "/usr/local/cuda/lib64/libcudnn.so.5"
   /root/torch/install/bin/luarocks install tds
   /root/torch/install/bin/luarocks install class
   /root/torch/install/bin/luarocks install nn
