@@ -25,6 +25,6 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
   /root/distro/install/bin/luarocks install cudnn
   /root/distro/install/bin/luarocks install cutorch
 
-  # chmod 755 /root
+  chmod 755 /root
   # Torch exists at: /root/distro/install/bin/th
-  chmod 755 /root/distro/install/bin
+  # chmod 755 /root/distro/install/bin
