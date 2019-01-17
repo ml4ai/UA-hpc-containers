@@ -1,5 +1,6 @@
 Bootstrap: docker
-From: spellrun/torch
+# From: spellrun/torch
+From: nightseas/cuda-torch
 
 %help
 This container is designed to utilize the Torch machine learning framework (a part of the Lua programming language).
@@ -17,13 +18,18 @@ tds, class, nn, nngraph, cunn, cudnn, cutorch
   # /root/torch/install/bin/luarocks install nn
   # /root/torch/install/bin/luarocks install nngraph
 
-  /root/distro/install/bin/luarocks install tds
-  /root/distro/install/bin/luarocks install class
-  /root/distro/install/bin/luarocks install nn
-  /root/distro/install/bin/luarocks install nngraph
-  /root/distro/install/bin/luarocks install cunn
-  /root/distro/install/bin/luarocks install cudnn
-  /root/distro/install/bin/luarocks install cutorch
+  luarocks install tds
+  luarocks install class
+  luarocks install nn
+  luarocks install nngraph
+
+  # /root/distro/install/bin/luarocks install tds
+  # /root/distro/install/bin/luarocks install class
+  # /root/distro/install/bin/luarocks install nn
+  # /root/distro/install/bin/luarocks install nngraph
+  # /root/distro/install/bin/luarocks install cunn
+  # /root/distro/install/bin/luarocks install cudnn
+  # /root/distro/install/bin/luarocks install cutorch
 
   chmod 755 /root
   # Torch exists at: /root/distro/install/bin/th
