@@ -1,6 +1,9 @@
 Bootstrap: docker
 From: pauldhein/im2markup:latest
 
+%help
+  This container is built from a Dockerfile that includes all pre-reqs needed to preprocess/train/evaluate Harvards im2markup tool
+
 %post
 
    # Below are some lines that specifically help bind points for UA HPC systems
