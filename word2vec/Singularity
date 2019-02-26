@@ -23,6 +23,8 @@ This container can be run by passing in values for the following variables (in-o
   apt-get -q update
   apt-get -y install cmake time
 
+  mkdir /rsgrps
+  mkdir /extra
   cd /opt/trunk
   make word2vec
   cd /
