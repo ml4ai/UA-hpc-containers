@@ -1,15 +1,13 @@
 Bootstrap: docker
-From: spellrun/pytorch
+From: nividia/cuda:9.1-cudnn7-runtime
 
 %help
-  This recipe builds a singularity container from the Spell.run Docker container for the PyTorch neural network framework. Note that PyTorch will be updated to 1.0.1
-
+  This recipe builds a singularity container from an Nividia Docker container for the PyTorch neural network framework.
 
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  pip install --upgrade torch
-  pip install torchtext
-  pip install torchvision
-  pip install tqdm
-  pip install scikit-learn
+  apt-get -y update
+  apt-get install python3 python3-pip python3-numpy
+  pip3 install torch torchvision torchtext
+  pip3 install tqdm scikit-learn
