@@ -2,7 +2,7 @@ Bootstrap: docker
 From: spellrun/pytorch
 
 %help
-  This recipe builds a singularity container from the Spell.run Docker container for the PyTorch neural network framework.
+  This recipe builds a singularity container from the Spell.run Docker container for the PyTorch neural network framework. Note that PyTorch will be updated to 1.0.1
 
 
 %post
