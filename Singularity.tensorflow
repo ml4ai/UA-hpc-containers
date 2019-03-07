@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: tensorflow/tensorflow:latest-gpu-py3
+From: spellrun/tensorflow
 
 %post
    # in-container bind points for shared filesystems
