@@ -12,6 +12,8 @@ From: nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
   add-apt-repository ppa:deadsnakes/ppa
   apt-get -y update
   apt-get -y install python3.6
-  apt-get -y install python3-pip
-  pip3 install torch torchvision torchtext
-  pip3 install tqdm scikit-learn
+  # apt-get -y install python3-pip
+  apt-get -y install curl
+  curl https://bootstrap.pypa.io/ez_setup.py -o - | python3.6 && python3.6 -m easy_install pip
+  pip install torch torchvision torchtext
+  pip install tqdm scikit-learn
