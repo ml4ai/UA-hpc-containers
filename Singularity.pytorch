@@ -7,6 +7,8 @@ From: nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  apt-get -y update
+  apt-get -y install software-properties-common
   add-apt-repository ppa:deadsnakes/ppa
   apt-get -y update
   apt-get -y install python3.6
