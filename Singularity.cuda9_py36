@@ -2,7 +2,7 @@ Bootstrap: docker
 From: nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
 
 %help
-  This recipe builds a singularity container from an Nividia Docker container for the PyTorch neural network framework.
+  This recipe builds a singularity container from an Nividia Docker container that replaces Python 3.5 with Python 3.6
 
 %post
   apt-get -y update
