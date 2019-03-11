@@ -1,5 +1,5 @@
-Bootstrap: shub
-From: ml4ai/UA-hpc-containers:cuda9_py36
+Bootstrap: docker
+From: nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
 
 
 %help
@@ -10,7 +10,22 @@ This container provides access to Python3.6 with the Numba JIT compilation libra
   Version 1.0
 
 %post
+apt-get -y update
+  apt-get install -y wget bzip2
+
+  cd /
+  wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
+  bash Anaconda3-2018.12-Linux-x86_64.sh -b
+  rm Anaconda3-2018.12-Linux-x86_64.sh
+  export PATH=/home/ubuntu/anaconda3/bin:$PATH
+
+  conda update conda
+  conda update anaconda
+  conda update --all
+
+
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  pip install numpy tqdm
-  pip install numba cudatoolkit
+
+  conda install numpy tqdm
+  conda install numba cudatoolkit
