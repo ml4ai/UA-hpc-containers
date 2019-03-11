@@ -1,0 +1,16 @@
+Bootstrap: shub
+From: UA-hpc-containers/cuda9_py36
+
+
+%help
+This container provides access to Python3.6 with the Numba JIT compilation library. This container is CUDA enabled so Numba code can be compiled with `cuda.jit`
+
+%labels
+  Maintainer Paul Hein
+  Version 1.0
+
+%post
+  # in-container bind points for shared filesystems
+  mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  pip install numpy tqdm
+  pip install numba cudatoolkit
