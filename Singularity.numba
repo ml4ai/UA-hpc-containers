@@ -3,7 +3,7 @@ From: nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
 
 
 %help
-This container provides access to Python3.6 with the Numba JIT compilation library. This container is CUDA enabled so Numba code can be compiled with `cuda.jit`
+This container provides access to Python3.6 via Anaconda3 with the Numba JIT compilation library. This container is CUDA enabled so Numba code can be compiled with `cuda.jit`
 
 %labels
   Maintainer Paul Hein
