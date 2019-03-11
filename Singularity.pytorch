@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: UA-hpc-containers/cuda9_py36
+From: ml4ai/UA-hpc-containers:cuda9_py36
 
 %help
   This recipe builds a singularity container from an Nividia Docker container for the PyTorch neural network framework.
