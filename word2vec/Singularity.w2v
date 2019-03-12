@@ -37,4 +37,4 @@ This container can be run by passing in values for the following variables (in-o
   MIN_OCC=$5
 
   W2VDIR=/opt/trunk/
-  time $W2VDIR/word2vec -train $IN -output $OUT -cbow 0 -size SIZE -window 10 -negative 0 -hs 1 -sample 1e-3 -threads NUM_THREADS -binary 0 -min-count MIN_OCC
+  time $W2VDIR/word2vec -train $IN -output $OUT -cbow 0 -size $SIZE -window 10 -negative 0 -hs 1 -sample 1e-3 -threads $NUM_THREADS -binary 0 -min-count $MIN_OCC
