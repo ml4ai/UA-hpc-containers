@@ -40,7 +40,7 @@ This container provides access to Python3.6 via Anaconda3 with the Numba JIT com
   # default mount paths
   mkdir /scratch /data
 
-  #Add CUDA paths
+  # Add CUDA paths
   echo "\n #Cuda paths \n" >> /environment
   echo 'export CPATH="/usr/local/cuda/include:$CPATH"' >> /environment
   echo 'export PATH="/usr/local/cuda/bin:$PATH"' >> /environment
@@ -60,21 +60,6 @@ This container provides access to Python3.6 via Anaconda3 with the Numba JIT com
   wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
   chmod +x Anaconda3-5.0.1-Linux-x86_64.sh
   ./Anaconda3-5.0.1-Linux-x86_64.sh -b -p $CONDA_INSTALL_PATH
-
-  # apt-get update && yes|apt-get upgrade
-  # apt-get install -y wget bzip2
-  # apt-get install -y sudo
-  # adduser --disabled-password --gecos '' ubuntu
-  # adduser ubuntu sudo
-  # echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-  # su - ubuntu
-  # cd /home/ubuntu/
-  # chmod a+rwx /home/ubuntu/
-  #
-  # wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
-  # bash Anaconda3-2018.12-Linux-x86_64.sh -b
-  # rm Anaconda3-2018.12-Linux-x86_64.sh
-  # export PATH=/home/ubuntu/anaconda3/bin:$PATH
 
   conda update conda
   conda update anaconda
