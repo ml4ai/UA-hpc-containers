@@ -1,0 +1,10 @@
+Bootstrap: shub
+From: ml4ai/UA-hpc-containers:pytorch
+
+%help
+  Temporary container for delphi with PyTorch support
+
+%post
+  # in-container bind points for shared filesystems
+  mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  pip install numpy networkx pytest
