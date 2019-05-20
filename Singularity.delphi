@@ -7,4 +7,7 @@ From: ml4ai/UA-hpc-containers:pytorch
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
-  pip install numpy networkx pytest
+  git clone https://github.com/ml4ai/delphi.git
+  cd delphi/
+  pip install -e .
+  pip install torch==1.0.1
