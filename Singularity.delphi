@@ -2,7 +2,7 @@ Bootstrap: shub
 From: ml4ai/UA-hpc-containers:pytorch
 
 %help
-  Temporary container for delphi with PyTorch support
+  Temporary container for the delphi repo with PyTorch support
 
 %post
   # in-container bind points for shared filesystems
@@ -10,4 +10,4 @@ From: ml4ai/UA-hpc-containers:pytorch
   git clone https://github.com/ml4ai/delphi.git
   cd delphi/
   pip install -e .
-  pip install torch==1.0.1
+  pip install torch==1.0.1 torchtext
