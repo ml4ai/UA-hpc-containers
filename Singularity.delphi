@@ -3,6 +3,7 @@ From: ml4ai/UA-hpc-containers:pytorch
 
 %help
   Temporary container for the delphi repo with PyTorch support
+  Just testing this build again
 
 %post
   # in-container bind points for shared filesystems
