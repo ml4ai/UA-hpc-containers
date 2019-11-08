@@ -7,6 +7,7 @@ From: ml4ai/UA-hpc-containers:cuda9_py36
 %post
   # in-container bind points for shared filesystems
   mkdir -p /extra /rsgrps /xdisk /uaopt /cm/shared /cm/local
+  apt-get install -y libsm6 libxext6 libxrender-dev
   pip install torch torchvision torchtext
   pip install opencv-python
   pip install tqdm scikit-learn
